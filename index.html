@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration Form</title>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, 1fr);    
+        gap: 0px;                            
+        width: 100%;                         
+        height: 100vh;                       
+    }
+ 
+    .box {
+        display: flex;
+        justify-content: center;
+        width: 100%;     
+        align-items: center;
+        border: 2px solid #000;
+        box-sizing: border-box; 
+    }
+
+    .box1, .box3, .box4 {
+        padding: 40px;
+        background-color: #f0f0f0;
+        
+    }
+
+    .box2 {
+        padding: 20px;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        background: url("https://plus.unsplash.com/premium_photo-1673306778968-5aab577a7365?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px; 
+        align-items: center; 
+        
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], select, button {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 14px;
+        width: 100%; 
+    }
+
+    button {
+        cursor: pointer;
+        color: white;
+        background-color: #007BFF; 
+        border: none;
+    }
+
+    .terms {
+        margin: 10px 0;
+        width: 100%;
+        color: #f0f0f0; 
+    }
+
+    label {
+        text-align: center; 
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+ 
+<div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">
+        <form action="#" method="POST">
+            <input type="email" placeholder="Email (**-*****-*@student.aiub.edu)" pattern="\d{2}-\d{5}-\d@student.aiub.edu" title="Email must be in the format xx-xxxxx-x@student.aiub.edu">
+            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Password must contain at least one number, one uppercase, one lowercase letter, and one special character">
+            <input type="password" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Please enter the same Password as above">
+            <input type="text" placeholder="Location">
+            <input type="text" placeholder="Zip Code" pattern="\d{5}" title="Five digit zip code">
+            <select name="city" required>
+                <option value="">Select City</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Chittagong">Chittagong</option>
+                <option value="Khulna">Khulna</option>
+                <option value="Sylhet">Sylhet</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Rangpur">Rangpur</option>
+                <option value="Barishal">Barishal</option>
+            </select>
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the Terms and Conditions</label>
+            </div>
+            <button type="submit">Submit & Register</button>
+        </form>
+    </div>
+    <div class="box box3">Box 3</div>
+    <div the="box box4">Box 4</div>
+</div>
+ 
+</body>
+</html>
