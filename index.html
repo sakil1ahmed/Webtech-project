@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f6fa;
+      margin: 0;
+      padding: 50px;
+      display: flex;
+      flex-direction: column; /* Stack the logo, text, and boxes vertically */
+      justify-content: center;
+      align-items: center; /* Center content horizontally */
+      min-height: 100vh;
+    }
+
+    img {
+      display: block;
+      height: 50px;
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      font-size: 24px; /* Font size for the text */
+      margin-top: 10px; /* Space between the logo and the text */
+      text-align: center;
+      color: #333; /* Color for the text */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 equal-width columns */
+      grid-template-rows: 60vh 50vh; /* Box 1 at 60% height, Box 3 at 50% */
+      gap: 20px; /* Reduced the gap between boxes */
+      width: 100%; /* Make sure the grid takes the full width */
+      max-width: 900px; /* Maximum width for the grid */
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 95%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .box2 {
+      overflow-y: auto;
+      height: 50vh; /* Set height of Box 2 */
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-height: 100%;
+      overflow-y: auto; 
+      padding-right: 10px;
+      box-sizing: border-box;
+    }
+
+    .form-content {
+      width: 100%;
+    }
+
+    .form-content h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-wrapper::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .form-wrapper::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+    <img src="img.png.png" alt="aiub">
+    <p>AIUB</p>
+
+<div class="grid-container">
+  <div class="box box1">Box 1</div>
+  <div class="box box2">
+    <div class="form-wrapper">
+      <div class="form-content">
+        <h2>Registration</h2>
+        <form id="registrationForm" action="#" method="POST">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username">
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="(**-*****-*@student.aiub.edu)">
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+          </div>
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+          </div>
+          <div class="input-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+          </div>
+          <div class="input-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Location">
+          </div>
+          <div class="input-group">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" placeholder="Zip Code">
+          </div>
+          <div class="input-group">
+            <label for="city">City</label>
+            <select name="city" id="city" required>
+              <option value="">Select City</option>
+              <option value="Dhaka">Dhaka</option>
+              <option value="Chittagong">Chittagong</option>
+              <option value="Khulna">Khulna</option>
+              <option value="Sylhet">Sylhet</option>
+              <option value="Rajshahi">Rajshahi</option>
+              <option value="Rangpur">Rangpur</option>
+              <option value="Barishal">Barishal</option>
+            </select>
+          </div>
+          <div class="terms">
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I agree to the Terms and Conditions</label>
+          </div>
+          <button type="submit">Submit & Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="box box3">Box 3</div>
+  <div class="box box4">Box 4</div>
+</div>
+
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const confirmPassword = document.getElementById("confirmPassword").value.trim();
+    const dob = document.getElementById("dob").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const zip = document.getElementById("zip").value.trim();
+    const city = document.getElementById("city").value;
+    const termsChecked = document.getElementById("terms").checked;
+
+    if (username === "") {
+        alert("Please enter a username.");
+        return;
+    }
+
+    const emailPattern = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
+    if (!emailPattern.test(email)) {
+        alert("Invalid email format. Use: xx-xxxxx-x@student.aiub.edu");
+        return;
+    }
+
+    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+    if (!passwordPattern.test(password)) {
+        alert("Password must have at least 8 characters, including uppercase, lowercase, number, and special character.");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    if (dob === "") {
+        alert("Please select your Date of Birth.");
+        return;
+    }
+
+    if (location === "") {
+        alert("Please enter your location.");
+        return;
+    }
+
+    if (!/^\d{5}$/.test(zip)) {
+        alert("Zip Code must be 5 digits.");
+        return;
+    }
+
+    if (city === "") {
+        alert("Please select your city.");
+        return;
+    }
+
+    if (!termsChecked) {
+        alert("Please agree to the Terms and Conditions.");
+        return;
+    }
+
+    alert("Registration Successful!");
+    this.submit();
+});
+</script>
+
+</body>
+</html>
