@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registration Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f6fa;
+      background-color: #a2b3f4;
       margin: 0;
       padding: 50px;
       display: flex;
@@ -42,9 +44,9 @@
     }
 
     .box {
-      background-color: white;
+      background-color: rgba(174, 193, 220, 0.644);
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(176, 176, 215, 0.1);
       padding: 20px;
       width: 95%;
       display: flex;
@@ -55,7 +57,11 @@
 
     .box2 {
       overflow-y: auto;
-      height: 50vh; 
+      height: 60vh; 
+    }
+    .box4 {
+      overflow-y: auto;
+      height: 30vh; 
     }
 
     .form-wrapper {
@@ -75,6 +81,7 @@
       margin-bottom: 20px;
       color: #333;
       font-size: 24px;
+      font-style:calc()
     }
 
     form {
@@ -98,6 +105,7 @@
     input[type="email"],
     input[type="password"],
     input[type="date"],
+    input[type="color"],
     select {
       padding: 10px;
       font-size: 14px;
@@ -118,7 +126,7 @@
     }
 
     button {
-      background-color: #007BFF;
+      background-color: #44678d;
       color: white;
       padding: 12px;
       border: none;
@@ -144,7 +152,7 @@
       margin-top: 20px;
       width: 100%;
       max-width: 900px;
-      height: 570px; 
+      height: 350px; 
       overflow-y: auto;
       overflow-x: auto; 
     }
@@ -170,12 +178,20 @@
     td {
       background-color: #f9f9f9;
     } 
+    .logo-text {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+
+    }
 
   </style>
 </head>
 <body>
+
     <img src="img.png.png" alt="aiub">
-    <p>AIUB</p>
+    <div class="logo-text">AIUB</div>
 
     <div class="grid-container">
       <div class="box box1">
@@ -185,106 +201,57 @@
               <table id="userInfoTable">
             <thead>
               <tr>
-                <th>Email</th>
-                <th>Username</th>
-                <th>Password</th>
                 <th>City</th>
-                <th>DOB</th>
+                <th>AQI</th>
+           
               </tr>
             </thead>
             <tbody>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
-              <tr><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr><td></td><td></td></tr>
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
+              <tr><td></td><td></td></tr>
+
 
               
             </tbody>
@@ -297,18 +264,18 @@
     <div class="form-wrapper">
       <div class="form-content">
         <h2>Registration</h2>
-        <form id="registrationForm" action="#" method="POST">
+        <form id="registrationForm" action="process.php" method="POST">
           <div class="input-group">
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter Username">
+            <input type="text" id="username" name="username" placeholder="Enter Username">
           </div>
           <div class="input-group">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="(**-*****-*@student.aiub.edu)">
+            <input type="email" id="email" name="email" placeholder="(**-*****-*@student.aiub.edu)">
           </div>
           <div class="input-group">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="password" name="password"  placeholder="Password">
           </div>
           <div class="input-group">
             <label for="confirmPassword">Confirm Password</label>
@@ -316,19 +283,23 @@
           </div>
           <div class="input-group">
             <label for="dob">Date of Birth</label>
-            <input type="date" id="dob">
+            <input type="date" name="dob" id="dob">
+          </div>
+          <div class="input-group">
+            <label for="input_color">Select color</label>
+            <input type="color" id="input_color" name="color" value="#ff0000">
           </div>
           <div class="input-group">
             <label for="location">Location</label>
-            <input type="text" id="location" placeholder="Location">
+            <input type="text" id="location" name="location" placeholder="Location">
           </div>
           <div class="input-group">
             <label for="zip">Zip Code</label>
-            <input type="text" id="zip" placeholder="Zip Code">
+            <input type="text" id="zip" name="zip" placeholder="Zip Code">
           </div>
           <div class="input-group">
             <label for="city">City</label>
-            <select name="city" id="city" required>
+            <select name="city" id="city" name="city" required>
               <option value="">Select City</option>
               <option value="Dhaka">Dhaka</option>
               <option value="Chittagong">Chittagong</option>
@@ -348,15 +319,60 @@
       </div>
     </div>
   </div>
-  <div class="box box3">Box 3</div>
+  <div class="box box3">
+    <div class="box box3">
+  <div class="form-wrapper">
+    <div class="form-content">
+      <h2>Login</h2>
+      <form id="loginForm" action="require.php" method="POST">
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" placeholder="Enter Password" required>
+        </div>
+        <button type="submit" name="login_button" value="submit
+        
+        
+        ">Login</button>
+      </form>
+      <div id="loginMessage" style="color: green; margin-top: 10px; display: none;">Registrar Successful</div>
+    </div>
+  </div>
+</div>
+  </div>
   <div class="box box4">Box 4</div>
 </div>
 
 <script>
+
+  function handleLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value.trim();
+
+
+    if (email === '' || password === '') {
+      alert('Please enter both email and password.');
+      return false;
+    }
+
+
+    const messageEl = document.getElementById('loginMessage');
+    messageEl.style.display = 'block';
+
+
+    setTimeout(() => {
+      messageEl.style.display = 'none';
+      window.location.href = 'index.html'; 
+    }, 2000);
+
+    return false; 
+  }
 document.getElementById("registrationForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-
     const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -367,58 +383,41 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     const city = document.getElementById("city").value;
     const termsChecked = document.getElementById("terms").checked;
 
-   
     if (username === "" || email === "" || password === "" || confirmPassword === "" || dob === "" || location === "" || zip === "" || city === "" || !termsChecked) {
         alert("Please fill in all fields and agree to the terms.");
+        e.preventDefault(); 
         return;
     }
+
     const emailPattern = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
     if (!emailPattern.test(email)) {
-        alert("Invalid email format. Use: xx-xxxxx-x@student.aiub.edu");
+        alert("Invalid email format.");
+        e.preventDefault();
         return;
     }
 
     const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
     if (!passwordPattern.test(password)) {
-        alert("Password must have at least 8 characters, including uppercase, lowercase, number, and special character.");
+        alert("Invalid password format.");
+        e.preventDefault();
         return;
     }
 
     if (password !== confirmPassword) {
         alert("Passwords do not match.");
+        e.preventDefault();
         return;
     }
+
     if (!/^\d{5}$/.test(zip)) {
         alert("Zip Code must be 5 digits.");
+        e.preventDefault();
         return;
     }
+    
 
-    const table = document.getElementById("userInfoTable").getElementsByTagName('tbody')[0];
-
-    const rows = table.rows;
-    let rowInserted = false; 
-
-    for (let i = 0; i < rows.length; i++) {
-        if (rows[i].cells[0].textContent === "") {
-            rows[i].cells[0].textContent = email;
-            rows[i].cells[1].textContent = username;
-            rows[i].cells[2].textContent = password;
-            rows[i].cells[3].textContent = city;
-            rows[i].cells[4].textContent = dob; 
-            rowInserted = true; 
-            break;
-        }
-    }
-
-    if (!rowInserted) {
-      
-        alert("The table is full. No more data can be added.");
-        return;
-    }
-
- 
-    alert("Registration Successful!");
 });
+
 
   </script>
 
