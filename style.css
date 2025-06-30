@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.box {
+  background-color: #e0f0ff;  /* 👈 New color */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 95%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to each box */
+.box {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0; /* start invisible, shown after animation */
+}
+
+/* Stagger each box slightly */
+.box1 { animation-delay: 0.2s; }
+.box2 { animation-delay: 0.4s; }
+.box3 { animation-delay: 0.6s; }
+.box4 { animation-delay: 0.8s; }
+/* Slight grow on focus or hover */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="color"],
+select,
+button {
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* ... rest of your CSS goes here (form, table, .box, etc.) */
